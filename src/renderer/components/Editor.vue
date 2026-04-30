@@ -368,10 +368,19 @@
     })
   }
 
+  const getSelectedText = (): string => {
+    if (!editor) return ''
+    const selection = editor.getSelection()
+    const model = editor.getModel()
+    if (!selection || !model || selection.isEmpty()) return ''
+    return model.getValueInRange(selection)
+  }
+
   defineExpose({
     updateValue,
     focusEditor,
     reconnectLsp,
+    getSelectedText,
   })
 </script>
 
