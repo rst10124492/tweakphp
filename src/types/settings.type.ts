@@ -5,6 +5,8 @@ export interface Settings {
   theme: string
   editorFontSize: number
   editorWordWrap: string
+  editorLineNumbers: string
+  editorIndentGuides: string
   layout: string
   output: string
   vimMode: string

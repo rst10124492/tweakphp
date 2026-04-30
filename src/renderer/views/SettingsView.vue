@@ -3,6 +3,7 @@
   import Container from '../components/Container.vue'
   import { useSettingsStore } from '../stores/settings'
   import GeneralSettings from './settings/GeneralSettings.vue'
+  import EditorSettings from './settings/EditorSettings.vue'
   import LoadersSettings from './settings/LoadersSettings.vue'
   import { useRoute, useRouter } from 'vue-router'
   import AiAutocompleteSetting from '@/views/settings/AiAutocompleteSetting.vue'
@@ -30,6 +31,14 @@
         <li class="mx-3">|</li>
         <li
           class="cursor-pointer hover:text-primary-500"
+          :class="{ 'text-primary-500': route.params.tab === 'editor' }"
+          @click="router.push({ name: 'settings', params: { tab: 'editor' } })"
+        >
+          Editor
+        </li>
+        <li class="mx-3">|</li>
+        <li
+          class="cursor-pointer hover:text-primary-500"
           :class="{ 'text-primary-500': route.params.tab === 'ai' }"
           @click="router.push({ name: 'settings', params: { tab: 'ai' } })"
         >
@@ -46,6 +55,7 @@
       </ul>
       <div class="py-10">
         <GeneralSettings v-if="!route.params.tab" />
+        <EditorSettings v-if="route.params.tab === 'editor'" />
         <LoadersSettings v-if="route.params.tab === 'loaders'" />
         <AiAutocompleteSetting v-if="route.params.tab === 'ai'" />
       </div>

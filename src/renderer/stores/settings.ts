@@ -13,6 +13,8 @@ export const useSettingsStore = defineStore('settings', () => {
     theme: 'dracula',
     editorFontSize: 15,
     editorWordWrap: 'on',
+    editorLineNumbers: 'on',
+    editorIndentGuides: 'on',
     layout: 'vertical',
     output: 'code',
     vimMode: 'off',

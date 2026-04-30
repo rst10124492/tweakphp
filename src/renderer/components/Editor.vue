@@ -91,6 +91,10 @@
           enabled: false,
         },
         wordWrap: settingsStore.settings.editorWordWrap as 'on' | 'off' | 'wordWrapColumn' | 'bounded',
+        lineNumbers: settingsStore.settings.editorLineNumbers as 'on' | 'off' | 'relative' | 'interval',
+        guides: {
+          indentation: settingsStore.settings.editorIndentGuides === 'on',
+        },
         theme: settingsStore.settings.theme,
         stickyScroll: {
           enabled: false,
