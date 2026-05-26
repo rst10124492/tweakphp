@@ -15,6 +15,7 @@ export const useSettingsStore = defineStore('settings', () => {
     editorWordWrap: 'on',
     editorLineNumbers: 'on',
     editorIndentGuides: 'on',
+    editorInlineHints: 'off',
     layout: 'vertical',
     output: 'code',
     vimMode: 'off',

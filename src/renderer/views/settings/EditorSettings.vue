@@ -74,6 +74,19 @@
     </div>
     <Divider class="mt-3" />
     <div class="mt-3 grid grid-cols-2 items-center">
+      <div>Inline hints</div>
+      <SelectInput
+        id="editor-inline-hints"
+        v-model="settingsStore.settings.editorInlineHints"
+        @change="saveSettings()"
+        placeholder="Select"
+      >
+        <option value="on">Enabled</option>
+        <option value="off">Disabled</option>
+      </SelectInput>
+    </div>
+    <Divider class="mt-3" />
+    <div class="mt-3 grid grid-cols-2 items-center">
       <div>Vim mode</div>
       <SelectInput
         id="editor-vim-mode"

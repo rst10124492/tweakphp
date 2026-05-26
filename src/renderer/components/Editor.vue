@@ -95,6 +95,9 @@
         guides: {
           indentation: settingsStore.settings.editorIndentGuides === 'on',
         },
+        inlayHints: {
+          enabled: settingsStore.settings.editorInlineHints === 'on' ? 'on' : 'off',
+        },
         theme: settingsStore.settings.theme,
         stickyScroll: {
           enabled: false,

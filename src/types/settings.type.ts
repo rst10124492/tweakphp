@@ -7,6 +7,7 @@ export interface Settings {
   editorWordWrap: string
   editorLineNumbers: string
   editorIndentGuides: string
+  editorInlineHints: string
   layout: string
   output: string
   vimMode: string
